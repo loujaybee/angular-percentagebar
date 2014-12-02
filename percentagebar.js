@@ -1,4 +1,4 @@
-angular.module("percentagebar", [])
+angular.module("angular-percentagebar", [])
     .directive('percentagebar', function() {
         return {
             restrict: 'E',
