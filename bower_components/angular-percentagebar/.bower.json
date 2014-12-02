@@ -13,11 +13,11 @@
   ],
   "license": "MIT",
   "homepage": "https://github.com/louisbichard/angular-percentagebar",
-  "_release": "85679ad74e",
+  "_release": "aac32ec1f6",
   "_resolution": {
     "type": "branch",
     "branch": "master",
-    "commit": "85679ad74efe7ecb215e4698993471948956322c"
+    "commit": "aac32ec1f646da385e7f43b965196218c9b937fa"
   },
   "_source": "git://github.com/louisbichard/angular-percentagebar.git",
   "_target": "*",
