@@ -8,21 +8,20 @@ Usage
 Install
 -------
 
-bower install angular-percentagebar
+Via bower: 
 
-Add dependency
---------------
+	bower install angular-percentagebar
+	
+Git clone: 
+
+	git clone https://github.com/louisbichard/angular-percentagebar.git
+
+Add module dependency
+---------------------
 
 You need to ensure that the module is added as a dependency.
 
-var app = angular.module("app", ["percentagebar"]);
-
-Add dependency
---------------
-
-You need to ensure that the module is added as a dependency.
-
-var app = angular.module("app", ["percentagebar"]);
+	var app = angular.module("app", ["percentagebar"]);
 
 Add component
 -------------
