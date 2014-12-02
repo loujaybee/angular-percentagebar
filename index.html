@@ -1,1 +1,69 @@
-<p> Hello World </p>
+<html ng-app="APP" ng-controller="example">
+
+<head>
+    <title>Angular percentage bar</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="favicon.ico" />
+</head>
+
+<body>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-md-12">
+                <h1> Angular percentagebar </h1>
+                <p class="lead"> A simple plugin for creating red and green progress bars</p>
+                <p class="lead"> License: MIT</p>
+                <hr>
+                <h2> Demo </h2>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <label> Value 1 </label>
+                        <select class="form-control" ng-model="input1">
+                            <option ng-repeat="number in numbers">{{number}}</option>
+                        </select>
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <label> Value 2 </label>
+                        <select class="form-control" ng-model="input2">
+                            <option ng-repeat="number in numbers">{{number}}</option>
+                        </select>
+                    </div>
+                </div>
+                <br>
+                <percentagebar data="{red: input1, green: input2}"></percentagebar>
+                <h2> Get started </h2>
+                <h3> 1. Install directive </h3>
+                <p> bower install angular-percentagebar </p>
+                <h3> 2. Add module dependency </h3>
+                <p> var APP = angular.module("APP", ["percentagebar"]) </p>
+                <h3> 3. Add HTML component </h3>
+                <h3> 4. Add data </h3>
+                <p> {red: 3, green: 5} </p>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script src="bower_components/underscore/underscore-min.js"></script>
+    <script>
+    var APP = angular.module("APP", ["percentagebar"])
+        .controller('example', function($scope) {
+            $scope.input1 = 3;
+            $scope.input2 = 3;
+
+            $scope.demo = {
+                red: 3,
+                green: 3
+            };
+
+            $scope.numbers = Array.apply(null, Array(21))
+                .map(function(_, i) {
+                    return i;
+                });
+        });
+    </script>
+    <script src="bower_components/angular-percentagebar/percentagebar.directive.js"></script>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+
+</html>

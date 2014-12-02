@@ -1,0 +1,26 @@
+{
+  "name": "angular-percentagebar",
+  "authors": [
+    "louisjohnbichard <louisjohnbichard@gmail.com>"
+  ],
+  "description": "Angular Directive plugin for UI percentage bars",
+  "main": "percentagebar.directive.js",
+  "keywords": [
+    "angular",
+    "percentagebar",
+    "graph",
+    "ui"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/louisbichard/angular-percentagebar",
+  "_release": "85679ad74e",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "85679ad74efe7ecb215e4698993471948956322c"
+  },
+  "_source": "git://github.com/louisbichard/angular-percentagebar.git",
+  "_target": "*",
+  "_originalSource": "angular-percentagebar",
+  "_direct": true
+}
