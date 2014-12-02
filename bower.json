@@ -1,0 +1,16 @@
+{
+    "name": "angular-percentagebar",
+    "version": "0.0.0",
+    "authors": [
+        "louisjohnbichard <louisjohnbichard@gmail.com>"
+    ],
+    "description": "Angular Directive plugin for UI percentage bars",
+    "main": "percentagebar.directive.js",
+    "keywords": [
+        "angular",
+        "percentagebar",
+        "graph",
+        "ui"
+    ],
+    "license": "MIT"
+}
