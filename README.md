@@ -27,6 +27,6 @@ var app = angular.module("app", ["percentagebar"]);
 Add component
 -------------
 
-<percentagebar data="{red: 3, green: 5}"></percentagebar>
+    <percentagebar data="{red: 3, green: 5}"></percentagebar>
 
 
