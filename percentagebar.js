@@ -4,7 +4,8 @@ angular.module("angular-percentagebar", [])
             restrict: 'E',
             replace: true,
             scope: {
-                data: '=data'
+                data: '=data',
+                options: '=options'
             },
             transclude: true,
             controller: function($scope) {
@@ -22,6 +23,7 @@ angular.module("angular-percentagebar", [])
                     return {
                         red: red_percentage,
                         green: 100 - red_percentage,
+                        // CREATE UI FRIENDLY PERCENTAGE
                         green_rounded: Math.floor(100 - red_percentage)
                     };
                 };
@@ -30,6 +32,18 @@ angular.module("angular-percentagebar", [])
                     $scope.output = $scope.calculateToPercentage($scope.data);
                 });
             },
-            template: "<div><div style='float: left; width: {{output.red}}%; height: 10px; background-color:red'></div><div style='float:right; width: {{output.green}}%; height: 10px; background-color:green'></div><p style='padding:0px;text-align:center;'>{{output.green_rounded}}%</p></div>"
+            template: [
+                // PARENT DIV
+                "<div class='animated' ng-class=\"{'grow': options.animation !== false}\">",
+                // RED BAR
+                "<div style='float: left; width: {{output.red}}%; height: 10px; background-color: {{ options.colour.red || \"red\"  }};'></div>",
+                // GREEN BAR
+                "<div style='float:right; width: {{output.green}}%; height: 10px; background-color: {{ options.colour.green || \"green\"  }} '></div>",
+                // LABEL
+                "<p ng-hide=\"options.label === false\" style='padding:0px;text-align:center;'>{{output.green_rounded}}%</p>",
+                // IF NO LABEL ADD PADDING (BREAK)
+                "<br ng-show=\" options.label === false \" />",
+                "</div>"
+            ].join('')
         };
     });
