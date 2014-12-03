@@ -4,6 +4,40 @@
     <title>Angular percentage bar</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+    .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+    }
+    @-webkit-keyframes grow {
+        0% {
+            -webkit-transform: scaleX(0.05);
+            transform: scaleX(0.05);
+            visibility: visible;
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+    @keyframes grow {
+        0% {
+            -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+            visibility: visible;
+        }
+        100% {
+            -webkit-transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+    .grow {
+        -webkit-animation-name: grow;
+        animation-name: grow;
+    }
+    </style>
 </head>
 
 <body>
@@ -30,7 +64,21 @@
                     </div>
                 </div>
                 <br>
+                <h3> Default </h3>
                 <percentagebar data="{red: input1, green: input2}"></percentagebar>
+                <h3> Different colours </h3>
+                <percentagebar options="{colour: {red: 'blue', green: '#b549ae' }}" data="{red: input1, green: input2}"></percentagebar>
+                <h3> Without label </h3>
+                <percentagebar options="{label: false}" data="{red: input1, green: input2}"></percentagebar>
+                <h3> Without load animation </h3>
+                <percentagebar options="{animation: false}" data="{red: input1, green: input2}"></percentagebar>
+                <h3> No animation, no label </h3>
+                <percentagebar options="{animation: false, label: false}" data="{red: input1, green: input2}"></percentagebar>
+                <hr>
+                <h2> Options </h2>
+                <p>animation - defines whether to use load animation (defaults to false)</p>
+                <p>label - show label under bar (defaults to true)</p>
+                <p>color - Object to override the red and blue colours</p>
             </div>
         </div>
     </div>
