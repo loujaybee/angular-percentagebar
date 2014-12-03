@@ -13,18 +13,18 @@ angular.module("angular-percentagebar", [])
                 $scope.calculateToPercentage = function(data) {
                     // ENSURE THEY ARE INTEGERS
                     var nums = {
-                        red: parseInt(data.red, 10),
-                        green: parseInt(data.green, 10)
+                        incomplete: parseInt(data.incomplete, 10),
+                        complete: parseInt(data.complete, 10)
                     };
                     // GET TOTAL
                     var total = 0;
-                    total = nums.red + nums.green;
-                    var red_percentage = (nums.red / total) * 100;
+                    total = nums.incomplete + nums.complete;
+                    var incomplete_percentage = (nums.incomplete / total) * 100;
                     return {
-                        red: red_percentage,
-                        green: 100 - red_percentage,
+                        incomplete: incomplete_percentage,
+                        complete: 100 - incomplete_percentage,
                         // CREATE UI FRIENDLY PERCENTAGE
-                        green_rounded: Math.floor(100 - red_percentage)
+                        complete_rounded: Math.floor(100 - incomplete_percentage)
                     };
                 };
 
@@ -38,11 +38,11 @@ angular.module("angular-percentagebar", [])
                 // STYLES
                 "<style>.animated {-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}@-webkit-keyframes grow {0% {-webkit-transform: scaleX(0.05);transform: scaleX(0.05);visibility: visible;}100% {-webkit-transform: translateX(0);transform: translateX(0);}}@keyframes grow {0% {-webkit-transform: translateX(-100%);transform: translateX(-100%);visibility: visible;}100% {-webkit-transform: translateX(0);transform: translateX(0);}}.grow {-webkit-animation-name: grow;animation-name: grow;}</style>",
                 // RED BAR
-                "<div style='float: left; width: {{output.red}}%; height: 10px; background-color: {{ options.colour.red || \"red\"  }};'></div>",
+                "<div style='float: left; width: {{output.incomplete}}%; height: 10px; background-color: {{ options.colour.incomplete || \"red\"  }};'></div>",
                 // GREEN BAR
-                "<div style='float:right; width: {{output.green}}%; height: 10px; background-color: {{ options.colour.green || \"green\"  }} '></div>",
+                "<div style='float:right; width: {{output.complete}}%; height: 10px; background-color: {{ options.colour.complete || \"green\"  }} '></div>",
                 // LABEL
-                "<p ng-hide=\"options.label === false\" style='padding:0px;text-align:center;'>{{output.green_rounded}}%</p>",
+                "<p ng-hide=\"options.label === false\" style='padding:0px;text-align:center;'>{{output.complete_rounded}}%</p>",
                 // IF NO LABEL ADD PADDING (BREAK)
                 "<br ng-show=\" options.label === false \" />",
                 "</div>"
