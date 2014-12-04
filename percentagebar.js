@@ -35,12 +35,11 @@ angular.module("angular-percentagebar", [])
             template: [
                 // PARENT DIV
                 "<div class='animated' ng-class=\"{'grow': options.animation !== false}\">",
-                // STYLES
-                "<style>.animated {-webkit-animation-duration: 1s;animation-duration: 1s;-webkit-animation-fill-mode: both;animation-fill-mode: both;}@-webkit-keyframes grow {0% {-webkit-transform: scaleX(0.05);transform: scaleX(0.05);visibility: visible;}100% {-webkit-transform: translateX(0);transform: translateX(0);}}@keyframes grow {0% {-webkit-transform: translateX(-100%);transform: translateX(-100%);visibility: visible;}100% {-webkit-transform: translateX(0);transform: translateX(0);}}.grow {-webkit-animation-name: grow;animation-name: grow;}</style>",
-                // RED BAR
-                "<div style='float: left; width: {{output.incomplete}}%; height: 10px; background-color: {{ options.colour.incomplete || \"red\"  }};'></div>",
-                // GREEN BAR
-                "<div style='float:right; width: {{output.complete}}%; height: 10px; background-color: {{ options.colour.complete || \"green\"  }} '></div>",
+                "<style> .animated{-webkit - animation - duration:1 s;animation - duration:1 s;- webkit - animation - fill - mode:both;animation - fill - mode:both}@ - webkit - keyframes grow{0 %{-webkit - transform:scaleX(0.05);transform:scaleX(0.05);visibility:visible}100 %{-webkit - transform:translateX(0);transform:translateX(0)}}@ keyframes grow{0 %{-webkit - transform:translateX(-100 %);transform:translateX(-100 %);visibility:visible}100 %{-webkit - transform:translateX(0);transform:translateX(0)}}.grow{-webkit - animation - name:grow;animation - name:grow}</style>",
+                // INCOMPLETE BAR
+                "<div style='float: left; width: {{output.incomplete}}%; height: 5px; background-color: {{ options.colour.incomplete || \"green\"  }}; opacity: 0.2;'></div>",
+                // COMPLETE BAR
+                "<div style='float:right; width: {{output.complete}}%; height: 5px; background-color: {{ options.colour.complete || \"green\"  }} '></div>",
                 // LABEL
                 "<p ng-hide=\"options.label === false\" style='padding:0px;text-align:center;'>{{output.complete_rounded}}%</p>",
                 // IF NO LABEL ADD PADDING (BREAK)
