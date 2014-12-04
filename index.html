@@ -17,13 +17,13 @@
                 <h2> Demo </h2>
                 <div class="row">
                     <div class="col-md-6 col-sm-6">
-                        <label> Value 1 </label>
+                        <label> Complete value </label>
                         <select class="form-control" ng-model="input1">
                             <option ng-repeat="number in numbers">{{number}}</option>
                         </select>
                     </div>
                     <div class="col-md-6 col-sm-6">
-                        <label> Value 2 </label>
+                        <label> Incomplete value </label>
                         <select class="form-control" ng-model="input2">
                             <option ng-repeat="number in numbers">{{number}}</option>
                         </select>
@@ -33,7 +33,7 @@
                 <h3> Default </h3>
                 <percentagebar data="{incomplete: input1, complete: input2}"></percentagebar>
                 <h3> Different colours </h3>
-                <percentagebar options="{colour: {incomplete: 'pink', complete: '#000000'}}" data="{incomplete: input1, complete: input2}"></percentagebar>
+                <percentagebar options="{colour: {incomplete: 'lightgreen', complete: 'green'}}" data="{incomplete: input1, complete: input2}"></percentagebar>
                 <h3> Without label </h3>
                 <percentagebar options="{label: false}" data="{incomplete: input1, complete: input2}"></percentagebar>
                 <h3> Without load animation </h3>
