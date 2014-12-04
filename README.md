@@ -6,11 +6,11 @@ Demo: http://louisbichard.github.io/angular-percentagebar/
 Install
 -------
 
-Via bower: 
+Installation via bower: 
 
 	bower install angular-percentagebar
-	
-Git clone: 
+
+Installation via git clone: 
 
 	git clone https://github.com/louisbichard/angular-percentagebar.git
 
@@ -24,6 +24,6 @@ You need to ensure that the module is added as a dependency.
 Add component
 -------------
 
-    <percentagebar data="{red: 3, green: 5}"></percentagebar>
+    <percentagebar data="{incomplete: 3, complete: 5}"></percentagebar>
 
 
