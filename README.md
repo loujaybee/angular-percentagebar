@@ -6,11 +6,11 @@ Demo: http://louisbichard.github.io/angular-percentagebar/
 Install
 -------
 
-Via bower: 
+Installation via bower: 
 
 	bower install angular-percentagebar
-	
-Git clone: 
+
+Installation via git clone: 
 
 	git clone https://github.com/louisbichard/angular-percentagebar.git
 
