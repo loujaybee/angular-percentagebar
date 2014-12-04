@@ -4,6 +4,40 @@
     <title>Angular percentage bar</title>
     <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="shortcut icon" href="favicon.ico" />
+    <style>
+    .animated {
+        -webkit - animation - duration: 1 s;
+        animation - duration: 1 s;
+        - webkit - animation - fill - mode: both;
+        animation - fill - mode: both;
+    }
+    @ - webkit - keyframes grow {
+        0 % {
+            -webkit - transform: scaleX(0.05);
+            transform: scaleX(0.05);
+            visibility: visible;
+        }
+        100 % {
+            -webkit - transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+    @ keyframes grow {
+        0 % {
+            -webkit - transform: translateX(-100 %);
+            transform: translateX(-100 %);
+            visibility: visible;
+        }
+        100 % {
+            -webkit - transform: translateX(0);
+            transform: translateX(0);
+        }
+    }
+    .grow {
+        -webkit - animation - name: grow;
+        animation - name: grow;
+    }
+    </style>
 </head>
 
 <body>
@@ -33,7 +67,7 @@
                 <h3> Default </h3>
                 <percentagebar data="{incomplete: input1, complete: input2}"></percentagebar>
                 <h3> Different colours </h3>
-                <percentagebar options="{colour: {incomplete: 'lightgreen', complete: 'green'}}" data="{incomplete: input1, complete: input2}"></percentagebar>
+                <percentagebar options="{colour: {incomplete: 'pink', complete: 'blue'}}" data="{incomplete: input1, complete: input2}"></percentagebar>
                 <h3> Without label </h3>
                 <percentagebar options="{label: false}" data="{incomplete: input1, complete: input2}"></percentagebar>
                 <h3> Without load animation </h3>
