@@ -24,6 +24,6 @@ You need to ensure that the module is added as a dependency.
 Add component
 -------------
 
-    <percentagebar data="{red: 3, green: 5}"></percentagebar>
+    <percentagebar data="{incomplete: 3, complete: 5}"></percentagebar>
 
 
